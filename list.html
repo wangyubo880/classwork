@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>河北中学</title>
+<link href="{CSS_PATH}/hbschools/news.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+	<div id="mybody">
+    	<div id="top">
+        	<div class="menu">
+            	<ul>
+              
+                     {pc:content action="category" catid="0" num="11" siteid="$siteid" order="listorder ASC"}
+                {loop $data $v}
+                {if $v['catid']==19}<li><a href="{$v['url']}" class="specil">{$v['catname']}</a></li>
+                {else}
+                <li><a href="{$v['url']}">{$v['catname']}</a></li>
+                {/if}
+                {/loop}
+               {/pc}              
+                </ul>
+            </div>           
+        </div>
+      <div id="dh">
+            	<h1><a href="index.html">河北中学首页</a> - <a href="#">学校概况</a> - 所获荣誉</h1>
+            	<div id="search">
+            <input name="search" type="text" class="search_text" /><input name="searchbut" type="button" class="search_but" value=" " />
+            </div>
+          </div>
+        <div id="left">
+        	<div id="leftmenu">
+            	<h1>学校概况</h1>
+                <ul>
+                	
+                    <a href="#">领导简介</a>
+                    <a href="#">学校简介</a>
+                    <a href="#">光荣历史</a>
+                    <a href="#" class="dq">所获荣誉</a>
+                    <a href="#">图说河中</a>  
+
+              </ul>
+            </div>
+          <div id="pic">
+          <h1></h1>
+           	<div id="colee" >
+<div id="colee1">
+<p> <img src="{IMG_PATH}/hbschools/pic.gif" width="200" height="150" />2010-2011年度先进单位</p>
+<p> <img src="{IMG_PATH}/hbschools/pic.gif" width="200" height="150" />2010-2011年度先进单位</p>
+<p> <img src="{IMG_PATH}/hbschools/pic.gif" width="200" height="150" />2010-2011年度先进单位</p>
+<p> <img src="{IMG_PATH}/hbschools/pic.gif" width="200" height="150" />2010-2011年度先进单位</p>
+<p> <img src="{IMG_PATH}/hbschools/pic.gif" width="200" height="150" />2010-2011年度先进单位</p>
+<p> <img src="{IMG_PATH}/hbschools/pic.gif" width="200" height="150" />2010-2011年度先进单位</p>
+
+</div>
+<div id="colee2"></div>
+</div>
+             
+            </div>
+        </div>
+        
+        <div id="right">
+        	<h1>所获荣誉</h1>
+            <ul>
+            
+     {pc:content action="lists" catid="26" order="inputtime DESC" num="20"}
+          {loop $data $v}
+            <li><a href="{$v['url']}">{$v['title']} </a><span class="newsdate">{date('Y-m-d',$v['inputtime'])}</span></li>
+          {/loop}
+                   {/pc}
+            </ul>
+            <div id="page">
+	<span class="disabled">前一页</span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=4">4</a><a href="#?page=5">5</a><a href="#?page=6">6</a><a href="#?page=2" class="disabled">后一页 
+	 </a></div>
+        </div>
+ 
+      </div>
+ 
+	<div id="foot">	  
+ 		Copyright © 2008－2013 http://www.***.com All Rights Reserved   网站备案：冀ICP备00000000号
+	</div>
+</body>
+<script type="text/javascript" src="{JS_PATH}/hbschools/pic.js"></script>
+</html>
